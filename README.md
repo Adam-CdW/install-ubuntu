@@ -1,4 +1,5 @@
-# install-ubuntu
+# Finalisation de l'installation d'un machine de dev
+Prérequis : avoir une install clean d'Ubuntu 20.04
 
 ### Préparation
 ```
