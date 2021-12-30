@@ -22,6 +22,8 @@ ansible-playbook \
 ### ZSH config
 https://github.com/Adam-CdW/zsh_config
 
+### Install docker-composer
+https://docs.docker.com/compose/install/
 
 ### Désactiver les logs d'erreur PCIE
 ```
