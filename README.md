@@ -14,6 +14,8 @@ sudo apt install ubuntu-restricted-extras
 https://github.com/adimeo-lab/ansible-dev-machine
 
 ```
+sudo apt install -y ansible ssh sshpass
+mkdir -p ~/.ssh && ssh-keyscan -H 127.0.0.1 >> ~/.ssh/known_hosts
 ansible-playbook \
   -i hosts playbook.yml \
   --extra-vars "lsb_release=focal ansible_user=ubuntu ansible_password=ubuntu email_username=codingpool ansible_become_password=ubuntu"
