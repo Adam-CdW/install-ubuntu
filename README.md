@@ -9,7 +9,7 @@ sudo apt upgrade
 sudo apt install software-properties-common
 sudo apt install ubuntu-restricted-extras
 
-ZSH_THEME="pygmalion"
+ZSH config : https://github.com/Adam-CdW/zsh_config
 
 Afficher les fichiers et dossiers cachés : ctrl+ h
 
