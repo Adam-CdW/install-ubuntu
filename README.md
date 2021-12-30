@@ -25,6 +25,29 @@ https://github.com/Adam-CdW/zsh_config
 ### Install docker-composer
 https://docs.docker.com/compose/install/
 
+### Mise en place de MKCERT
+#### Installation de `mkcert`
+Suivre les instructions d'installation (_build from source_ conseillé) : https://github.com/FiloSottile/mkcert#installation
+
+#### Initialisation de `mkcert` pour créer une autorité de confiance local
+```
+mkcert -install
+```
+
+#### On génère un certificat wildcard pour couvrir tous nos besoins d'url local
+```
+cd ~
+mkdir certs
+mkcert -cert-file certs/local-cert.pem -key-file certs/local-key.pem "*.local" "*.adimeo.local" "*.docker.local"
+```
+
+#### On crée un lien symbolique de nos certificat à la racine de notre ordinateur pour les lier à `Traefik`
+```
+sudo ln -s ~/certs/ /
+```
+
+
+  
 ### Désactiver les logs d'erreur PCIE
 ```
 sudo vi /etc/default/grub
