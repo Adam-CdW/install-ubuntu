@@ -35,9 +35,14 @@ https://docs.docker.com/compose/install/
 #### Installation de `mkcert`
 Suivre les instructions d'installation (_build from source_ conseillé) : https://github.com/FiloSottile/mkcert#installation
 ```
+cd
 sudo apt install golang
 git clone https://github.com/FiloSottile/mkcert && cd mkcert
 go build -ldflags "-X main.Version=$(git describe --tags)"
+sudo cp mkcert /usr/local/bin/mkcert
+sudo chmod +x /usr/local/bin/mkcert
+cd ..
+sudo rm -rf mkcert
 ```
 
 #### Initialisation de `mkcert` pour créer une autorité de confiance local
