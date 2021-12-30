@@ -1,7 +1,6 @@
 # install-ubuntu
 
-https://github.com/adimeo-lab/ansible-dev-machine
-
+### Préparation
 ```
 sudo apt update
 sudo apt dist-upgrade
@@ -10,7 +9,17 @@ sudo apt install software-properties-common
 sudo apt install ubuntu-restricted-extras
 ```
 
-ZSH config : https://github.com/Adam-CdW/zsh_config
+### Script ansible
+https://github.com/adimeo-lab/ansible-dev-machine
+
+```
+ansible-playbook \
+  -i hosts playbook.yml \
+  --extra-vars "lsb_release=focal ansible_user=ubuntu ansible_password=ubuntu email_username=codingpool ansible_become_password=ubuntu"
+```
+
+### ZSH config
+https://github.com/Adam-CdW/zsh_config
 
 
 ### Désactiver les logs d'erreur PCIE
